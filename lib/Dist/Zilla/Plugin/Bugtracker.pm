@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::Bugtracker;
-our $VERSION = '1.100700';
+our $VERSION = '1.100701';
 
 # ABSTRACT: automatically sets the bugtracker URL
 use Moose;
@@ -24,7 +24,7 @@ no Moose;
 1;
 
 
-
+__END__
 =pod
 
 =head1 NAME
@@ -33,7 +33,7 @@ Dist::Zilla::Plugin::Bugtracker - automatically sets the bugtracker URL
 
 =head1 VERSION
 
-version 1.100700
+version 1.100701
 
 =head1 SYNOPSIS
 
@@ -43,10 +43,7 @@ In C<dist.ini>:
 
 =head1 DESCRIPTION
 
-This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
-following files
-
-  xt/release/synopsis.t - a standard Test::Synopsis test
+This plugin sets the distribution's bugtracker URL as metadata.
 
 =head1 FUNCTIONS
 
@@ -74,14 +71,3 @@ the same terms as the Perl 5 programming language system itself.
 
 =cut
 
-
-__DATA__
-___[ xt/release/synopsis.t ]___
-#!perl
-
-use Test::More;
-
-eval "use Test::Synopsis";
-plan skip_all => "Test::Synopsis required for testing synopses"
-  if $@;
-all_synopsis_ok('lib');

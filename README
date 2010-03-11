@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::Bugtracker - automatically sets the bugtracker URL
 
 VERSION
-    version 1.100700
+    version 1.100701
 
 SYNOPSIS
     In "dist.ini":
@@ -10,10 +10,7 @@ SYNOPSIS
         [Bugtracker]
 
 DESCRIPTION
-    This is an extension of Dist::Zilla::Plugin::InlineFiles, providing the
-    following files
-
-      xt/release/synopsis.t - a standard Test::Synopsis test
+    This plugin sets the distribution's bugtracker URL as metadata.
 
 FUNCTIONS
   metadata

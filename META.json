@@ -8,7 +8,7 @@
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
    "generated_by" : "Dist::Zilla version 1.100660",
-   "version" : "1.100700",
+   "version" : "1.100701",
    "name" : "Dist-Zilla-Plugin-Bugtracker",
    "author" : [
       "Marcel Gruenauer <marcel@cpan.org>"
@@ -17,7 +17,7 @@
    "build_requires" : {},
    "provides" : {
       "Dist::Zilla::Plugin::Bugtracker" : {
-         "version" : "1.100700",
+         "version" : "1.100701",
          "file" : "lib/Dist/Zilla/Plugin/Bugtracker.pm"
       }
    },
