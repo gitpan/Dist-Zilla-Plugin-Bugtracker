@@ -1,0 +1,34 @@
+NAME
+    Dist::Zilla::Plugin::Bugtracker - automatically sets the bugtracker URL
+
+VERSION
+    version 1.100700
+
+SYNOPSIS
+    In "dist.ini":
+
+        [Bugtracker]
+
+DESCRIPTION
+    This is an extension of Dist::Zilla::Plugin::InlineFiles, providing the
+    following files
+
+      xt/release/synopsis.t - a standard Test::Synopsis test
+
+FUNCTIONS
+  metadata
+    Sets the bugtracker URL in the distribution's metadata.
+
+INSTALLATION
+    See perlmodinstall for information and options on installing Perl
+    modules.
+
+AUTHOR
+      Marcel Gruenauer <marcel@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Marcel Gruenauer.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
