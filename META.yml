@@ -11,7 +11,8 @@ build_requires:
   Test::More: 0.94
 configure_requires:
   ExtUtils::MakeMaker: 6.31
-generated_by: 'Dist::Zilla version 2.100960'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 3.101461, CPAN::Meta::Converter version 2.101461'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,8 +21,7 @@ name: Dist-Zilla-Plugin-Bugtracker
 provides:
   Dist::Zilla::Plugin::Bugtracker:
     file: lib/Dist/Zilla/Plugin/Bugtracker.pm
-    version: 1.101420
-recommends: {}
+    version: 1.101490
 requires:
   Dist::Zilla::Role::MetaProvider: 0
   Moose: 0
@@ -30,4 +30,4 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Bugtracker
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-Bugtracker/
   repository: http://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker
-version: 1.101420
+version: 1.101490

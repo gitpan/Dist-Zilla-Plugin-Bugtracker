@@ -1,5 +1,8 @@
 Revision history for Perl extension Dist-Zilla-Plugin-Bugtracker
 
+1.101490  2010-05-29 22:33:57 Europe/Vienna
+    - comply with CPAN::Meta::Resources and Dist::Zilla v3 (thanks apocalypse)
+
 1.101420  2010-05-22 14:11:15 Europe/Vienna
     - removed weaver.ini since that's handled in Dist::Zilla's [@MARCEL] now
     - removed unused variable

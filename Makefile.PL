@@ -9,36 +9,46 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-                       'test' => {
-                                   'TESTS' => 't/*.t'
-                                 },
-                       'NAME' => 'Dist::Zilla::Plugin::Bugtracker',
-                       'DISTNAME' => 'Dist-Zilla-Plugin-Bugtracker',
-                       'CONFIGURE_REQUIRES' => {
-                                                 'ExtUtils::MakeMaker' => '6.31'
-                                               },
-                       'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
-                       'BUILD_REQUIRES' => {
-                                             'Test::More' => '0.94',
-                                             'Scalar::Util' => '0',
-                                             'English' => '0',
-                                             'File::Find' => '0',
-                                             'File::Temp' => '0',
-                                             'Carp' => '0'
-                                           },
-                       'ABSTRACT' => 'Automatically sets the bugtracker URL',
-                       'EXE_FILES' => [],
-                       'VERSION' => '1.101420',
-                       'PREREQ_PM' => {
-                                        'Dist::Zilla::Role::MetaProvider' => '0',
-                                        'Moose' => '0'
-                                      },
-                       'LICENSE' => 'perl'
-                     );
+  'ABSTRACT' => 'Automatically sets the bugtracker URL',
+  'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
+  'BUILD_REQUIRES' => {
+    'Carp' => '0',
+    'English' => '0',
+    'File::Find' => '0',
+    'File::Temp' => '0',
+    'Scalar::Util' => '0',
+    'Test::More' => '0.94'
+  },
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'Dist-Zilla-Plugin-Bugtracker',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Dist::Zilla::Plugin::Bugtracker',
+  'PREREQ_PM' => {
+    'Dist::Zilla::Role::MetaProvider' => '0',
+    'Moose' => '0'
+  },
+  'VERSION' => '1.101490',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
 
 
-delete $WriteMakefileArgs{BUILD_REQUIRES}
-  unless eval { ExtUtils::MakeMaker->VERSION(6.56) };
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM}; 
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod}; 
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
   unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
