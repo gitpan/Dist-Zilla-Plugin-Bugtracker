@@ -2,14 +2,14 @@
 use strict;
 use warnings;
 
- BEGIN { require 5.008; } 
+BEGIN { require 5.008; }
 
 use ExtUtils::MakeMaker 6.31;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Automatically sets the bugtracker URL',
+  'ABSTRACT' => 'Automatically sets the bugtracker URL and mailto',
   'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
@@ -17,6 +17,8 @@ my %WriteMakefileArgs = (
     'File::Find' => '0',
     'File::Temp' => '0',
     'Scalar::Util' => '0',
+    'Test::Differences' => '0',
+    'Test::MockObject' => '0',
     'Test::More' => '0.94'
   },
   'CONFIGURE_REQUIRES' => {
@@ -28,9 +30,10 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::Plugin::Bugtracker',
   'PREREQ_PM' => {
     'Dist::Zilla::Role::MetaProvider' => '0',
-    'Moose' => '0'
+    'Moose' => '0',
+    'MooseX::Types::URI' => '0'
   },
-  'VERSION' => '1.101490',
+  'VERSION' => '1.102670',
   'test' => {
     'TESTS' => 't/*.t'
   }
@@ -39,10 +42,10 @@ my %WriteMakefileArgs = (
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM}; 
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
   for my $mod ( keys %$br ) {
     if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod}; 
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
     }
     else {
       $pp->{$mod} = $br->{$mod};

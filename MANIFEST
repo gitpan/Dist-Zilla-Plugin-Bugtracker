@@ -7,10 +7,10 @@ META.json
 META.yml
 Makefile.PL
 README
-dist.ini
 lib/Dist/Zilla/Plugin/Bugtracker.pm
 t/00-compile.t
 t/000-report-versions.t
+t/all.t
 t/author-critic.t
 t/perlcriticrc
 t/release-check-changes.t
@@ -19,6 +19,7 @@ t/release-distmeta.t
 t/release-has-version.t
 t/release-kwalitee.t
 t/release-minimum-version.t
+t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-spell.t
 t/release-pod-syntax.t
