@@ -4,7 +4,7 @@
       "Marcel Gruenauer <marcel@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "perl_5"
    ],
@@ -23,7 +23,6 @@
          "requires" : {
             "Dist::Zilla::Role::MetaProvider" : 0,
             "Moose" : 0,
-            "MooseX::Types::URI" : 0,
             "perl" : "5.008"
          }
       },
@@ -43,7 +42,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::Bugtracker" : {
          "file" : "lib/Dist/Zilla/Plugin/Bugtracker.pm",
-         "version" : "1.102670"
+         "version" : "1.111080"
       }
    },
    "release_status" : "stable",
@@ -54,9 +53,11 @@
       },
       "homepage" : "http://search.cpan.org/dist/Dist-Zilla-Plugin-Bugtracker/",
       "repository" : {
-         "url" : "http://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker"
+         "type" : "git",
+         "url" : "git://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker.git",
+         "web" : "http://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker"
       }
    },
-   "version" : "1.102670"
+   "version" : "1.111080"
 }
 

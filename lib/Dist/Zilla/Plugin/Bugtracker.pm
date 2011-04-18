@@ -4,17 +4,15 @@ use warnings;
 
 package Dist::Zilla::Plugin::Bugtracker;
 BEGIN {
-  $Dist::Zilla::Plugin::Bugtracker::VERSION = '1.102670';
+  $Dist::Zilla::Plugin::Bugtracker::VERSION = '1.111080';
 }
 
 # ABSTRACT: Automatically sets the bugtracker URL and mailto
 use Moose;
-use MooseX::Types::URI qw(Uri);
 with 'Dist::Zilla::Role::MetaProvider';
 has web => (
     is      => 'ro',
-    isa     => Uri,
-    coerce  => 1,
+    isa     => 'Str',
     default => 'http://rt.cpan.org/Public/Dist/Display.html?Name=%s',
 );
 has mailto => (
@@ -65,7 +63,7 @@ Dist::Zilla::Plugin::Bugtracker - Automatically sets the bugtracker URL and mail
 
 =head1 VERSION
 
-version 1.102670
+version 1.111080
 
 =head1 SYNOPSIS
 
@@ -182,7 +180,7 @@ Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Dist-Zilla-Plugin-Bugtracker/>.
 
 The development version lives at L<http://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker>
-and may be cloned from L<git://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker>.
+and may be cloned from L<git://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
 

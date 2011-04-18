@@ -30,10 +30,9 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::Plugin::Bugtracker',
   'PREREQ_PM' => {
     'Dist::Zilla::Role::MetaProvider' => '0',
-    'Moose' => '0',
-    'MooseX::Types::URI' => '0'
+    'Moose' => '0'
   },
-  'VERSION' => '1.102670',
+  'VERSION' => '1.111080',
   'test' => {
     'TESTS' => 't/*.t'
   }

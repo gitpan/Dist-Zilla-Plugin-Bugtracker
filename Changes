@@ -1,5 +1,10 @@
 Revision history for Perl extension Dist-Zilla-Plugin-Bugtracker
 
+1.111080  2011-04-18 11:53:54 Europe/Vienna
+    - fixed POD
+    - bugtracker URL is no longer a URI::http object, which is unsupported
+      (thanks doherty)
+
 1.102670  2010-09-24 18:38:23 Europe/Vienna
     - make bugtracker URL and email address configurable (idea by Mike Doherty)
 

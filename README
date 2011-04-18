@@ -3,7 +3,7 @@ NAME
     and mailto
 
 VERSION
-    version 1.102670
+    version 1.111080
 
 SYNOPSIS
     In "dist.ini":
@@ -117,9 +117,10 @@ AVAILABILITY
 
     The development version lives at
     <http://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker> and may be
-    cloned from <git://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker>.
-    Instead of sending patches, please fork this project using the standard
-    git and github infrastructure.
+    cloned from
+    <git://github.com/hanekomu/Dist-Zilla-Plugin-Bugtracker.git>. Instead of
+    sending patches, please fork this project using the standard git and
+    github infrastructure.
 
 AUTHOR
     Marcel Gruenauer <marcel@cpan.org>
